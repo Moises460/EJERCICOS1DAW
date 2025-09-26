@@ -5,6 +5,8 @@ public class Actividad2 {
 
      static void main() {
 
+
+
          Scanner teclas = new Scanner(System.in);
 
          System.out.println("Pon tu NicKname"); //esto es el esrcibir
