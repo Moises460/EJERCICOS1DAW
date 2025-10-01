@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Actividad4 {
     public static void main(String[] args) {
         Scanner teclas = new Scanner(System.in);
-           int num1;
-           int num2;
-           int num3;
+           int num1 = 0;
+           int num2 = 0;
+           int num3 = 0;
         try {
             System.out.println("Introduce un numero:");
             int num1 = teclas.nextInt();
