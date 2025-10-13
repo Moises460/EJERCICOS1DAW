@@ -48,6 +48,7 @@ public class Bascula {
 
                 double peso_min = altura * 2 / 8;
                  double resltado2= peso-peso_max;
+
                 if (peso<peso_min){
                     System.out.println("No puedes subir porque pesas menos de "+ peso_min);
                 } else{
@@ -58,7 +59,11 @@ public class Bascula {
                         System.out.println("¡¡PUDES SUBIRTE!!");
                     }
                 }
+
+                
             }
         }
+
+
     }
 }

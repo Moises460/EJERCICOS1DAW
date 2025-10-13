@@ -1,22 +1,16 @@
 import java.util.Scanner;
 
 public class Actividad4 {
-     static void main(String[] args) {
+     static void main() {
         Scanner teclas = new Scanner(System.in);
-<<<<<<< HEAD
 
-=======
+
+
            int num1 = 0;
            int num2 = 0;
            int num3 = 0;
->>>>>>> 953ea60ee7e88939b700cdf6a4abccf8769a33b7
         try {
-            System.out.println("Introduce un numero:");
-            int num1 = teclas.nextInt();
-            System.out.println("Introduce otro numero:");
-            int num2 = teclas.nextInt();
-            System.out.println("Introduce otro numero:");
-            int num3 = teclas.nextInt();
+
 
             if (num1 == num2 || num1 == num3 || num2 == num3) {
                 System.out.println("ERROR");
