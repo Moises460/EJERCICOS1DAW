@@ -3,17 +3,26 @@ import java.util.Scanner;
 public class Practica2_tema2 {
     static void main() {
         Scanner teclas= new Scanner(System.in);
+        boolean repetir;
+        String fecha;
 
-      System.out.println("Introduce tu fecha de nacimineto (dd/mm/aaaa)");
-      String fecha=teclas.nextLine();
-      String barra="/";
+        do {
+            System.out.println("Introduce tu fecha de nacimiento (dd/mm/aaaa):");
+            fecha = teclas.nextLine();
+
+            if (fecha.matches("\\d{2}[/-]\\d{2}[/-]\\d{4}")) {
+                fecha = fecha.replace("/", "+").replace("-","+");
+                repetir = false;
+            } else {
+                System.out.println(" PORFAVOR COMO DICE ARRIBA<3");
+                repetir = true;
+            }
+        } while (repetir);
+
+        fecha = fecha.replace("/", "+").replace("-","+");
 
 
 
-
-
-
-        fecha=fecha.replace(barra,"+");
       int  dia=Integer.parseInt(fecha.substring(0,2));
       int  mes=Integer.parseInt(fecha.substring(3,5));
       int  año=Integer.parseInt(fecha.substring(6,10));
