@@ -9,8 +9,19 @@ public class Actividad4 {
            int num1 = 0;
            int num2 = 0;
            int num3 = 0;
+<<<<<<< HEAD
         try {
 
+=======
+
+        try {
+            System.out.println("Introduce un numero:");
+            num1 = teclas.nextInt();
+            System.out.println("Introduce otro numero:");
+            num2 = teclas.nextInt();
+            System.out.println("Introduce otro numero:");
+             num3 = teclas.nextInt();
+>>>>>>> d187c9f53de8d7946b25d3ad6fc853795c5e5836
 
             if (num1 == num2 || num1 == num3 || num2 == num3) {
                 System.out.println("ERROR");
