@@ -1,45 +1,48 @@
 import java.util.Scanner;
 
 public class Actividad4 {
-     static void main() {
+    static void main() {
         Scanner teclas = new Scanner(System.in);
 
 
-
-           int num1 = 0;
-           int num2 = 0;
-           int num3 = 0;
-<<<<<<< HEAD
-        try {
-
-=======
+        int num1 = 0;
+        int num2 = 0;
+        int num3 = 0;
 
         try {
-            System.out.println("Introduce un numero:");
-            num1 = teclas.nextInt();
-            System.out.println("Introduce otro numero:");
-            num2 = teclas.nextInt();
-            System.out.println("Introduce otro numero:");
-             num3 = teclas.nextInt();
->>>>>>> d187c9f53de8d7946b25d3ad6fc853795c5e5836
 
-            if (num1 == num2 || num1 == num3 || num2 == num3) {
-                System.out.println("ERROR");
-            } else {
-                if (num1 >= num2 && num1 >= num3) {
-                    System.out.println("El número mayor es: " + num1);
+
+            try {
+                System.out.println("Introduce un numero:");
+                num1 = teclas.nextInt();
+                System.out.println("Introduce otro numero:");
+                num2 = teclas.nextInt();
+                System.out.println("Introduce otro numero:");
+                num3 = teclas.nextInt();
+
+
+                if (num1 == num2 || num1 == num3 || num2 == num3) {
+                    System.out.println("ERROR");
                 } else {
-                    if (num2 >= num1 && num2 >= num3) {
-                        System.out.println("El número mayor es: " + num2);
+                    if (num1 >= num2 && num1 >= num3) {
+                        System.out.println("El número mayor es: " + num1);
                     } else {
-                        System.out.println("El número mayor es: " + num3);
+                        if (num2 >= num1 && num2 >= num3) {
+                            System.out.println("El número mayor es: " + num2);
+                        } else {
+                            System.out.println("El número mayor es: " + num3);
+                        }
                     }
-                }
 
-            }
-                }catch(Exception err){
+                }
+            } catch (Exception err) {
                 System.out.println("INTRODUCE NUMERO!!!NO LETRAS,GRACIAS<3");
             }
 
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
-}
+    }
+
+
