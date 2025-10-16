@@ -8,8 +8,12 @@ public class Practica2_tema2 {
       String fecha=teclas.nextLine();
       String barra="/";
 
-        fecha=fecha.replace(barra,"+");
 
+
+
+
+
+        fecha=fecha.replace(barra,"+");
       int  dia=Integer.parseInt(fecha.substring(0,2));
       int  mes=Integer.parseInt(fecha.substring(3,5));
       int  año=Integer.parseInt(fecha.substring(6,10));
@@ -30,6 +34,7 @@ public class Practica2_tema2 {
       int total2=cifra1+cifra2+cifra3+cifra4;
 
       System.out.println(cifra1+"+"+ cifra2+"+"+cifra3+"+"+cifra4+" = "+total2 );
+      System.out.println("Tu numero de la suerte es "+total2);
 
 
 
