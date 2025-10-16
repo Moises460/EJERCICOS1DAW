@@ -15,11 +15,17 @@ public class Practica4_tema2 {
 
 
         int Contadar_mundo=texto.length();
+
         int Contar_palabra=palabra.length();
+
         texto=texto.replace(palabra,"");
+
         int texto_nuevo=texto.length();
+
         int veces=(Contadar_mundo-texto_nuevo)/(Contar_palabra);
+
         System.out.println(veces);
+
 
     }
 }
