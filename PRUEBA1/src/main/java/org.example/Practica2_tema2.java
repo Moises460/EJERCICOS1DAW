@@ -17,7 +17,7 @@ public class Practica2_tema2 {
                 System.out.println(" PORFAVOR COMO DICE ARRIBA<3");
                 repetir = true;
             }
-        } while (repetir);
+        } while (repetir );
 
         fecha = fecha.replace("/", "+").replace("-","+");
 
