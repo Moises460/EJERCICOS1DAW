@@ -1,9 +1,12 @@
+import java.util.Scanner;
+
 public class Prueba1 {
 
 
 
     static void main(){
 
+        Scanner teclas= new Scanner(System.in);
 
         String frase="Viva españa y su gente<3";
 
@@ -43,6 +46,13 @@ public class Prueba1 {
         String cambiado= frase.replace("españa","España");
         System.out.println(cambiado);
 
+
+
+
+        if(teclas.hasNextInt()) {
+            int numero = teclas.nextInt();
+            System.out.println(numero);
+        }
 
 
 
