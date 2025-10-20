@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Practica2_tema2 {
+public class pRUEBA {
     static void main() {
         Scanner teclado = new Scanner(System.in);
 
