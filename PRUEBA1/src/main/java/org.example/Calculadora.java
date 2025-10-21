@@ -31,36 +31,41 @@ public class Calculadora {
 
             switch (modo) {
                 case 1:
-
                     System.out.println("HAS ELEGIDO LA SUMA");
                     System.out.println("INTRODUCE NÚMEROS PARA SUMAR");
 
-                    if (teclas.hasNextDouble()){
-                          num1 = teclas.nextDouble();
-                          System.out.println("INTRODUCE OTRO NUMERO PARA SUMAR");
-                          num2 = teclas.nextDouble();
-                          double suma = num1 + num2;
-                          System.out.println("LA SUMA DE "+num1+" + "+num2+" = " + suma);
-                    }else {
-                          System.out.println("SOLO NUMEROS<3");
-                    }
+                    if (teclas.hasNextDouble()) {
+                        num1 = teclas.nextDouble();
+                        System.out.println("INTRODUCE OTRO NUMERO PARA SUMAR");
 
+                        if (teclas.hasNextDouble()) {
+                             num2 = teclas.nextDouble();
+                            double suma = num1 + num2;
+                            System.out.println("LA SUMA DE " + num1 + " + " + num2 + " = " + suma);
+                        } else {
+                            System.out.println("EL SEGUNDO VALOR NO ES UN NÚMERO ");
+                        }
+                    } else {
+                        System.out.println("EL PRIMER VALOR NO ES UN NÚMERO ");
+                    }
                     break;
                 case 2:
-
                     System.out.println("HAS ELEGIDO LA RESTA");
                     System.out.println("INTRODUCE NUMEROS PARA RESTAR");
 
                     if(teclas.hasNextDouble()){
                         num1= teclas.nextDouble();
                         System.out.println("INTRODUCE OTRO NUEMRO PARA RESTAR");
-                        num2= teclas.nextDouble();
-                        double resta = num1-num2;
-                        System.out.println("LA RESTA DE "+num1+" - "+num2+" = "+resta);
+                        if (teclas.hasNextDouble()) {
+                            num2 = teclas.nextDouble();
+                            double resta = num1 - num2;
+                            System.out.println("LA RESTA DE " + num1 + " - " + num2 + " = " + resta);
+                        }else {
+                            System.out.println("EL SEGUNDO VALOR NO ES UN NÚMERO");
+                        }
                     }else {
-                        System.out.println("SOLO NUMEROS<3");
+                        System.out.println("EL PRIMER VALOR NO ES UN NÚMERO");
                     }
-
                     break;
                 case 3:
                     System.out.println("HAS ELEGIDO LA MULTIPLICACIÓN");
@@ -69,11 +74,16 @@ public class Calculadora {
                     if(teclas.hasNextDouble()){
                         num1= teclas.nextDouble();
                         System.out.println("INTRODUCE OTRO NUEMRO PARA MULTIPLICAR");
-                        num2= teclas.nextDouble();
-                        double multi = num1*num2;
-                        System.out.println("LA MULTIPLICACION DE "+num1+" x "+num2+" = "+multi);
+
+                        if(teclas.hasNextDouble()) {
+                            num2 = teclas.nextDouble();
+                            double multi = num1 * num2;
+                            System.out.println("LA MULTIPLICACION DE " + num1 + " x " + num2 + " = " + multi);
+                        }else {
+                            System.out.println("EL SEGUNDO VALOR NO ES UN NÚMERO");
+                        }
                     }else {
-                        System.out.println("SOLO NUMEROS<3");
+                        System.out.println("EL PRIMER VALOR NO ES UN NÚMERO");
                     }
                     break;
                 case 4:
@@ -83,9 +93,13 @@ public class Calculadora {
                     if(teclas.hasNextDouble()){
                         num1= teclas.nextDouble();
                         System.out.println("INTRODUCE OTRO NUMERO PARA DIVIDIR(QUE NO SEA 0)");
-                        num2= teclas.nextDouble();
+                        if(teclas.hasNextDouble()) {
+                            num2 = teclas.nextDouble();
+                        }else {
+                            System.out.println("EL SEGUNDO VALOR NO ES UN NÚMERO");
+                        }
                     }else {
-                        System.out.println("SOLO NUMEROS<3");
+                        System.out.println("EL PRIMER VALOR NO ES UN NÚMERO");
                     }
                     if (num1 == 0 || num2==0) {
                         System.out.println("NO SE PUEDE DIVIDIR ENTRE 0");
