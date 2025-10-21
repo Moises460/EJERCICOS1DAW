@@ -8,7 +8,6 @@ public class Calculadora {
         int modo;
         double num1=0;
         double num2=0;
-        boolean repetir=true;
 
             System.out.println("--------CALCULADORA--------");
             System.out.println("SELECCIONE QUE QUIERE HACER");
@@ -22,7 +21,7 @@ public class Calculadora {
             System.out.println("-----------------------------");
 
             if (teclas.hasNextInt()) {
-                modo = teclas.nextInt();  // ✅ lee el número correctamente
+                modo = teclas.nextInt();  // lee el número correctamente
             } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
                 teclas.next(); // descarta entrada no válida
@@ -138,15 +137,6 @@ public class Calculadora {
 
 
 
-<<<<<<< HEAD
-        if (teclas.hasNext()){
-            modo= teclas.nextDouble();
-        }else{
-            System.out.println("SOLO NUMEROS");
 
-        }
-        System.out.println(modo);
-=======
->>>>>>> e0de866eeec4925403f140a0f4e74e54c7b56931
     }
 }
