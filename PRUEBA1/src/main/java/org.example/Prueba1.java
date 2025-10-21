@@ -6,6 +6,17 @@ public class Prueba1 {
 
     static void main(){
 
+
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int resultado = a++ == 1 && a > b++ ? a += b :
+                a > 0 && a == b ? a += c :
+                        b == c ? a++ : a--; //a=3, b=3, c=3, resultado=2
+
+        System.out.println(resultado);
+
+
         Scanner teclas= new Scanner(System.in);
 
         String frase="Viva españa y su gente<3";
@@ -88,7 +99,6 @@ public class Prueba1 {
 
 
                }
-
 
 
 
