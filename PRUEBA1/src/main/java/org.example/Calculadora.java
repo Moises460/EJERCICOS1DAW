@@ -40,7 +40,7 @@ public class Calculadora {
                           System.out.println("INTRODUCE OTRO NUMERO PARA SUMAR");
                           num2 = teclas.nextDouble();
                           double suma = num1 + num2;
-                          System.out.println("Tu resultado es " + suma);
+                          System.out.println("LA SUMA DE "+num1+" + "+num2+" = " + suma);
                     }else {
                           System.out.println("SOLO NUMEROS<3");
                     }
@@ -56,7 +56,7 @@ public class Calculadora {
                         System.out.println("INTRODUCE OTRO NUEMRO PARA RESTAR");
                         num2= teclas.nextDouble();
                         double resta = num1-num2;
-                        System.out.println("TU RESULTADOS ES "+resta);
+                        System.out.println("LA RESTA DE "+num1+" - "+num2+" = "+resta);
                     }else {
                         System.out.println("SOLO NUMEROS<3");
                     }
@@ -71,7 +71,7 @@ public class Calculadora {
                         System.out.println("INTRODUCE OTRO NUEMRO PARA MULTIPLICAR");
                         num2= teclas.nextDouble();
                         double multi = num1*num2;
-                        System.out.println("TU RESULTADOS ES "+multi);
+                        System.out.println("LA MULTIPLICACION DE "+num1+" x "+num2+" = "+multi);
                     }else {
                         System.out.println("SOLO NUMEROS<3");
                     }
@@ -92,7 +92,7 @@ public class Calculadora {
                         return;
                     } else {
                         double division = num1/num2;
-                        System.out.println("TU RESULTADOS ES "+division);
+                        System.out.println("LA DIVISION DE "+num1+" / "+num2+" = "+division);
                     }
                     break;
                 case 5:
