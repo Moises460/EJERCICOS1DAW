@@ -8,11 +8,11 @@ public class Prueba1 {
 
 
         int a = 1;
-        int b = 2;
-        int c = 3;
-        int resultado = a++ == 1 && a > b++ ? a += b :
-                a > 0 && a == b ? a += c :
-                        b == c ? a++ : a--; //a=3, b=3, c=3, resultado=2
+        int b = 3;
+        int c = 5;
+        int resultado = a++ == 3 && a > b++ ? a += b :
+                            a > 0 && a == b ? a += c :
+                                   b == c ? a-- : a++; //resultado=2;
 
         System.out.println(resultado);
 

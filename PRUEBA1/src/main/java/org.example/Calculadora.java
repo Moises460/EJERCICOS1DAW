@@ -30,7 +30,7 @@ public class Calculadora {
             System.out.println("-----------------------------");
 
             if (teclas.hasNextInt()) {
-                modo = teclas.nextInt();  // lee el número correctamente
+                modo = teclas.nextInt();
             } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
                  return;
