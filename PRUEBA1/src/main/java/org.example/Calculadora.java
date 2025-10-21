@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Calculadora {
     static void main() {
         Scanner teclas= new Scanner(System.in);
-        int modo=0;
+        int modo;
         double num1=0;
         double num2=0;
         boolean repetir=true;
