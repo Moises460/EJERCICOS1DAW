@@ -18,7 +18,9 @@ public class Calculadora {
 
         if (teclas.hasNext()){
             modo= teclas.nextDouble();
-            return;
+        }else{
+            System.out.println("SOLO NUMEROS");
+
         }
         System.out.println(modo);
     }
