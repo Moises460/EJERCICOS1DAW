@@ -8,7 +8,6 @@ public class Calculadora {
         int modo;
         double num1=0;
         double num2=0;
-        boolean repetir=true;
 
             System.out.println("--------CALCULADORA--------");
             System.out.println("SELECCIONE QUE QUIERE HACER");
@@ -22,15 +21,15 @@ public class Calculadora {
             System.out.println("-----------------------------");
 
             if (teclas.hasNextInt()) {
-                modo = teclas.nextInt();  // ✅ lee el número correctamente
+                modo = teclas.nextInt();  //  lee el número correctamente
             } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
-                teclas.next(); // descarta entrada no válida
+                teclas.next(); // descarta formato inocorrecto no válida
                  return;
             }
 
             switch (modo) {
-                case 1:
+                case 1:    //la case 1 hace la suma del num1 y num2, tiene implementado un control de formatos incorrctos(letras)
                     System.out.println("HAS ELEGIDO LA SUMA");
                     System.out.println("INTRODUCE NÚMEROS PARA SUMAR");
 
