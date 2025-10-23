@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Bascula {
 
-    static void main() {
+    static void main(String[] args) {
         Scanner teclas = new Scanner(System.in); //sacener de teclas
 
        final double peso_max=120;      //Eston son las variables /constantes
