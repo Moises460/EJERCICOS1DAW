@@ -39,18 +39,14 @@ public class BUCLES_PRACTICAS {
         System.out.println("cuantes veces lo quieres sumar");
         int num= teclas.nextInt();
         for (int i = 0; i <num ;i++) {
-            for (int j = 0; j <i ; j++) {
-                System.out.println("Instrduce numero"+i);
+
+                System.out.println("Instrduce numero "+i);
                 num2 = teclas.nextInt();
-
-            }
                 contador += num2;
-                System.out.println(contador);
-
 
 
         }
-
+               System.out.println("TU RESULTADO DE LA SUMA ES "+contador);
 
 
 
