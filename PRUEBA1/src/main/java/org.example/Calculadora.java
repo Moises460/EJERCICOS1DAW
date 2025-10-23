@@ -16,6 +16,7 @@ public class Calculadora {
             num1 = teclas.nextDouble();
         } else {
             System.out.println("EL PRIMER VALOR NO ES UN NÚMERO ");
+            return;
         }
 
             System.out.println("---------------------------");
@@ -41,11 +42,10 @@ public class Calculadora {
                     num2 = teclas.nextDouble();
                 }else {
                     System.out.println("EL SEGUNDO VALOR NO ES UN NUEMRO ");
+                    return;
                 }
             }
-
-
-
+            
             switch (modo) {
                 case 1:
                     System.out.println("HAS ELEGIDO LA SUMA");
