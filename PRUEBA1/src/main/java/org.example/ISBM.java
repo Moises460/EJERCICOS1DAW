@@ -39,19 +39,19 @@ public class ISBM {
                     int suma = 0;
 
                     for (int i = 0; i < 10; i++) {
-                        char c = validar_mayus.charAt(i);
+                        char x = validar_mayus.charAt(i);
                         int valor;
 
-                        if (c == 'X') {
+                        if (x == 'X') {
                             valor = 10;
                         } else {
-                            valor = c - '0';
+                            valor = x - '0';
                         }
                         int resta = 10 - i;
                         int resultado = valor * resta;
                         suma += resultado;
 
-                        
+
                     }
 
                     System.out.println("Total suma1: " + suma);
