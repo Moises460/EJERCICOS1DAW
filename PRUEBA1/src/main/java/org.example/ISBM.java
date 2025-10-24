@@ -9,6 +9,7 @@ public class ISBM {
       String reparar;
 
 
+
         System.out.println("--------------------");
         System.out.println("   VALIDAROR ISBM   ");
         System.out.println("--------------------");
@@ -31,12 +32,29 @@ public class ISBM {
                 System.out.println("------------------------------");
                 System.out.println(" INTRODUZCA ISBM PARA VALIDAR ");
                 System.out.println("------------------------------");
-                validar= tecla.next();
-                int tamanyo=validar.length();
-                if (tamanyo==10){
-                    
-                }else{
-                    System.out.println("TU NUMERO NO ES CORRECTO SUPERA LAS CIFRAS MAXIMAS ACEPTADAS");
+                validar = tecla.next();
+                int tamanyo = validar.length();
+                if (tamanyo == 10) {
+                    int suma = 0;
+
+                    for (int i = 0; i < 10; i++) {
+                        String digitoStr = validar.substring(i, i + 1); // Extrae el dígito como String
+                        int valor = Integer.parseInt(digitoStr);        // Convierte a entero
+                        int resta = 10 - i;                              // Peso decreciente
+                        int producto = valor * resta;
+                        suma += producto;
+
+                        System.out.println(valor + " x " + resta + " = " + producto);
+                    }
+
+                    if (suma % 11 == 0) {
+                        System.out.println("El ISBN-10 es válido.");
+                    } else {
+                        System.out.println(" El ISBN-10 no es válido.");
+                    }
+
+                } else {
+                    System.out.println("TU NUMERO NO ES CORRECTO. SUPERA LAS CIFRAS MAXIMAS ACEPTADAS");
                 }
                 break;
             case 2:

@@ -8,24 +8,24 @@ public class BUCLES_PRACTICAS {
         Scanner teclas=new Scanner(System.in);
 
 
-//        System.out.println("introduce numero");
-//        int N = teclas.nextInt();
-//        for (int i=N; i >=1 ; i--) {
-//
-//
-//            System.out.println(i);
-//        }
+      System.out.println("introduce numero");
+       int N = teclas.nextInt();
+       for (int i=N; i >=1 ; i--) {
 
 
-//        System.out.println("introduce una aplabra");
-//        String palabra= teclas.next();
-//        int tamaño=palabra.length();
-//        for (int i = 0; i < tamaño; i++) {
-//            System.out.println(palabra.charAt(i)); //normal
-//        }
-        //for (int i=tamaño-1; i<tamaño;i--) {
+          System.out.println(i);
+       }
+
+
+       System.out.println("introduce una aplabra");
+       String palabra= teclas.next();
+       int tamaño=palabra.length();
+//     for (int i = 0; i < tamaño; i++) {
+//          System.out.println(palabra.charAt(i)); //normal
+//      }
+        for (int i=tamaño-1; i<tamaño;i--) {
             //System.out.println(palabra.charAt(i)); //invertida
-        //}
+        }
 
 
         System.out.println("que tabla quieres?");

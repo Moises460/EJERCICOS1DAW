@@ -7,14 +7,6 @@ public class Prueba1 {
     static void main(){
 
 
-        int a = 1;
-        int b = 3;
-        int c = 5;
-        int resultado = a++ == 3 && a > b++ ? a += b :
-                            a > 0 && a == b ? a += c :
-                                   b == c ? a-- : a++; //resultado=2;
-
-        System.out.println(resultado);
 
 
         Scanner teclas= new Scanner(System.in);
@@ -24,7 +16,7 @@ public class Prueba1 {
         int tamanyo= frase.length();
         System.out.println(tamanyo);
 
-        System.out.println(frase.charAt(17));
+        System.out.println(frase.charAt(0));
 
         String trozo=frase.substring(14,24);
         System.out.println(trozo);
