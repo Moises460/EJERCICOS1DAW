@@ -41,10 +41,10 @@ public class ISBM {
                         String digitoStr = validar.substring(i, i + 1); // Extrae el dígito como String
                         int valor = Integer.parseInt(digitoStr);        // Convierte a entero
                         int resta = 10 - i;                              // Peso decreciente
-                        int producto = valor * resta;
-                        suma += producto;
+                        int validaro = valor * resta;
+                        suma += validaro;
 
-                        System.out.println(valor + " x " + resta + " = " + producto);
+                        System.out.println(valor + " x " + resta + " = " + validaro);
                     }
 
                     if (suma % 11 == 0) {
