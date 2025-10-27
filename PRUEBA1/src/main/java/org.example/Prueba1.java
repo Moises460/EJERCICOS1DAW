@@ -6,6 +6,9 @@ public class Prueba1 {
 
     static void main(){
 
+
+
+
         Scanner teclas= new Scanner(System.in);
 
         String frase="Viva españa y su gente<3";
@@ -13,7 +16,7 @@ public class Prueba1 {
         int tamanyo= frase.length();
         System.out.println(tamanyo);
 
-        System.out.println(frase.charAt(17));
+        System.out.println(frase.charAt(0));
 
         String trozo=frase.substring(14,24);
         System.out.println(trozo);
@@ -88,7 +91,6 @@ public class Prueba1 {
 
 
                }
-
 
 
 

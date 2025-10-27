@@ -20,6 +20,8 @@ public class Practica4_tema2 {
 
         texto=texto.replace(palabra,"");
 
+        System.out.println(texto);
+
         int texto_nuevo=texto.length();
 
         int veces=(Contadar_mundo-texto_nuevo)/(Contar_palabra);
