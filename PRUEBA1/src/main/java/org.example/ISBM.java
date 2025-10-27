@@ -74,39 +74,51 @@ public class ISBM {
 
             case 2:
                 System.out.println("------------------------------");
-                System.out.println(" INTRODUZCA ISBM PARA REPARAR ");
+                System.out.println(" INTRODUZCA ISBN PARA REPARAR ");
                 System.out.println("------------------------------");
-                reparar = tecla.next();
-                aceptar_mayus=reparar.toUpperCase();
+                 reparar = tecla.next();
+                 aceptar_mayus = reparar.toUpperCase();
+
+                if (aceptar_mayus.length() != 10) {
+                    System.out.println("El ISBN debe tener 10 caracteres");
+                    return;
+                }
+
                 int suma = 0;
-                int posicion=-1;
+                int posSigno = -1; // posición del '?' si existe
 
                 for (int i = 0; i < 10; i++) {
-                        char x = aceptar_mayus.charAt(i);
-                        int valor;
+                    char x = aceptar_mayus.charAt(i);
+                    int valor = 0;
 
-                        if(aceptar_mayus.equals("?")){
-                        posicion=i;
-                        continue;
-                        }
+                    if (x == '?') {
+                        posSigno = i;
+                    }
 
-                        if (i == 9 && x == 'X') {
-                            valor = 10;
-                        } else if (x >= '0' && x <= '9') {
-                            valor = x - '0';
-                        } else {
-                            System.out.println("Carácter inválido en la posición " + (i + 1));
+                    if (i == 9 && x == 'X') {
+                        valor = 10;
+                    } else if (x >= '0' && x <= '9') {
+                        valor = x - '0';
+                    } else {
+                        System.out.println("Carácter inválido en la posición " + (i + 1));
+                        return;
+                    }
+
+                    int resta = 10 - i;
+                    suma += valor * resta;
+                }
+
+                if (posSigno != -1) {
+                    for (int j = 0; j <= 10; j++) {
+                        int test = suma + j * (10 - posSigno);
+                        if (test % 11 == 0) {
+                            System.out.println("El dígito correcto en la posición " + (posSigno + 1) + " es: " + (j == 10 ? "X" : j));
                             return;
                         }
-                    int resta = 10 - i;
-                    suma += resultado;
-                }
-
-                if (posicion !=-1){
-                    for (int i = 0; i <=10 ; i++) {
-
                     }
+                    System.out.println("No se pudo reparar el ISBN");
                 }
+
 
 
                 break;
