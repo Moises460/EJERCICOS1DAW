@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class ISBM {
     static void main() {
         Scanner tecla = new Scanner(System.in);
-
+        int resultado=0;
         int tamanyo = 0;
         int seleccion = 0;
         String validar;
         String reparar;
+        String aceptar_mayus;
         String validar_mayus;
 
         System.out.println("--------------------");
@@ -42,26 +43,28 @@ public class ISBM {
                         char x = validar_mayus.charAt(i);
                         int valor;
 
-                        if (x == 'X') {
+                        if (i == 9 && x == 'X') {
                             valor = 10;
-                        } else {
+                        } else if (x >= '0' && x <= '9') {
                             valor = x - '0';
+                        } else {
+                            System.out.println("Carácter inválido en la posición " + (i + 1));
+                            return;
                         }
                         int resta = 10 - i;
-                        int resultado = valor * resta;
+                        resultado = valor * resta;
                         suma += resultado;
-
-
                     }
+
 
                     System.out.println("Total suma1: " + suma);
 
 
                     if (suma % 11 == 0) {
 
-                        System.out.println("El ISBN es válido.");
+                        System.out.println("El ISBN ES VALIDO.");
                     } else {
-                        System.out.println("El ISBN no es válido.");
+                        System.out.println("El ISBN NO ES VALIDO.");
                     }
 
                 } else {
@@ -74,6 +77,38 @@ public class ISBM {
                 System.out.println(" INTRODUZCA ISBM PARA REPARAR ");
                 System.out.println("------------------------------");
                 reparar = tecla.next();
+                aceptar_mayus=reparar.toUpperCase();
+                int suma = 0;
+                int posicion=-1;
+
+                for (int i = 0; i < 10; i++) {
+                        char x = aceptar_mayus.charAt(i);
+                        int valor;
+
+                        if(aceptar_mayus.equals("?")){
+                        posicion=i;
+                        continue;
+                        }
+
+                        if (i == 9 && x == 'X') {
+                            valor = 10;
+                        } else if (x >= '0' && x <= '9') {
+                            valor = x - '0';
+                        } else {
+                            System.out.println("Carácter inválido en la posición " + (i + 1));
+                            return;
+                        }
+                    int resta = 10 - i;
+                    suma += resultado;
+                }
+
+                if (posicion !=-1){
+                    for (int i = 0; i <=10 ; i++) {
+
+                    }
+                }
+
+
                 break;
 
             case 3:
