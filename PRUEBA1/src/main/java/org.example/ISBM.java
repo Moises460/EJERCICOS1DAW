@@ -7,8 +7,6 @@ public class ISBM {
         int tamanyo = 0;
         int seleccion = 0;
         String validar;
-        String reparar;
-        String aceptar_mayus;
         String validar_mayus;
 
         System.out.println("--------------------");
@@ -76,8 +74,8 @@ public class ISBM {
                 System.out.println("------------------------------");
                 System.out.println(" INTRODUZCA ISBN PARA REPARAR ");
                 System.out.println("------------------------------");
-                 reparar = tecla.next();
-                 aceptar_mayus = reparar.toUpperCase();
+                String reparar = tecla.next();
+                String aceptar_mayus = reparar.toUpperCase();
 
                 if (aceptar_mayus.length() != 10) {
                     System.out.println("El ISBN debe tener 10 caracteres");
@@ -85,14 +83,15 @@ public class ISBM {
                 }
 
                 int suma = 0;
-                int posSigno = -1; // posición del '?' si existe
+                int posicion = -1;
 
                 for (int i = 0; i < 10; i++) {
                     char x = aceptar_mayus.charAt(i);
                     int valor = 0;
 
                     if (x == '?') {
-                        posSigno = i;
+                        posicion = i;
+                        continue;
                     }
 
                     if (i == 9 && x == 'X') {
@@ -108,11 +107,12 @@ public class ISBM {
                     suma += valor * resta;
                 }
 
-                if (posSigno != -1) {
-                    for (int j = 0; j <= 10; j++) {
-                        int test = suma + j * (10 - posSigno);
+
+                if (posicion != -1) {
+                    for (int i = 0; i <= 10; i++) {
+                        int test = suma + i * (10 - posicion);
                         if (test % 11 == 0) {
-                            System.out.println("El dígito correcto en la posición " + (posSigno + 1) + " es: " + (j == 10 ? "X" : j));
+                            System.out.println("El dígito correcto en la posición " + (posicion + 1) + " es: " + (i == 10 ? "X" : i));
                             return;
                         }
                     }
