@@ -32,11 +32,8 @@ public class Calculadora {
 
             if (teclas.hasNextInt()) {
 
-                modo = teclas.nextInt();  //  lee el número correctamente
-            } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
                 teclas.next(); // descarta formato inocorrecto no válida
-
                 modo = teclas.nextInt();
             } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
