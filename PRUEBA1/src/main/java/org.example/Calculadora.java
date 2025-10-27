@@ -31,16 +31,16 @@ public class Calculadora {
             System.out.println("-----------------------------");
 
             if (teclas.hasNextInt()) {
-<<<<<<< HEAD
+
                 modo = teclas.nextInt();  //  lee el número correctamente
             } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
                 teclas.next(); // descarta formato inocorrecto no válida
-=======
+
                 modo = teclas.nextInt();
             } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
->>>>>>> 6216f752535482cf61d65180e44af927f2deb45f
+
                  return;
             }
             if(modo<5){
