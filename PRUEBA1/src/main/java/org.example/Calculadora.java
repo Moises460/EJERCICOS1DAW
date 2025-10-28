@@ -47,7 +47,7 @@ public class Calculadora {
             }
             
             switch (modo) {
-                case 1:
+                case 1:    //la case 1 hace la suma del num1 y num2, tiene implementado un control de formatos incorrctos(letras)
                     System.out.println("HAS ELEGIDO LA SUMA");
                     double suma = num1 + num2;
                     System.out.println("LA SUMA DE " + num1 + " + " + num2 + " = " + suma);
