@@ -76,7 +76,6 @@ public class ISBM {
                 System.out.println("------------------------------");
                 System.out.println(" INTRODUZCA ISBN PARA REPARAR ");
                 System.out.println("------------------------------");
-<<<<<<< HEAD
                 String reparar = tecla.next();
                 String aceptar_mayus = reparar.toUpperCase();
 
@@ -95,48 +94,6 @@ public class ISBM {
                     if (x == '?') {
                         posSigno = i; // guardamos la posición a reparar
                         continue; // dejamos para calcular después
-=======
-                System.out.println("  ");
-                reparar = tecla.next();
-                aceptar_mayus=reparar.toUpperCase();
-                int suma = 0;
-                int posicion = -1;
-
-                for (int i = 0; i < 10; i++) {
-                    char x = reparar.charAt(i);
-
-                    if (x == '?') {
-                        posicion = i;
-                        continue;
-                    }
-
-                    int valor;
-                    if (i == 9 && x == 'X') {
-                        valor = 10;
-                    } else if (x >= '0' && x <= '9') {
-                        valor = x - '0';
-                    } else {
-                        System.out.println("Carácter inválido en la posición " + (i + 1));
-                        return;
-                    }
-
-                    suma += valor * (10 - i);
-                }
-
-                if (posicion == -1) {
-                    System.out.println("No hay carácter '?' para reparar.");
-                    return;
-                }
-
-                // Calcular el valor que falta
-                for (int j = 0; j <= 10; j++) {
-                    int total = suma + j * (10 - posicion);
-                    if (total % 11 == 0) {
-                        char repararando = (j == 10) ? 'X' : (char) ('0' + j);
-                        System.out.println("El ISBN reparado es: " +
-                                reparar.substring(0, posicion) + repararando + reparar.substring(posicion + 1));
-                        return;
->>>>>>> 11290ece870cf30d7f2ebc48b04ad86c3d1a74a2
                     }
 
                     if (i == 9 && x == 'X') {
@@ -164,7 +121,6 @@ public class ISBM {
                     System.out.println("No se pudo reparar el ISBN");
                 }
 
-                System.out.println("No se pudo reparar el ISBN.");
 
                 break;
 
