@@ -31,13 +31,9 @@ public class Calculadora {
             System.out.println("-----------------------------");
 
             if (teclas.hasNextInt()) {
-
-                System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
-                teclas.next(); // descarta formato inocorrecto no válida
                 modo = teclas.nextInt();
             } else {
                 System.out.println(" INTRODUCE UN NÚMERO, NO LETRAS <3");
-
                  return;
             }
             if(modo<5){

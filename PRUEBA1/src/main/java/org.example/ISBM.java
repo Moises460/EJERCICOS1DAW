@@ -7,8 +7,6 @@ public class ISBM {
         int tamanyo = 0;
         int seleccion = 0;
         String validar;
-        String reparar;
-        String aceptar_mayus;
         String validar_mayus;
 
         System.out.println("--------------------");
@@ -74,23 +72,42 @@ public class ISBM {
 
             case 2:
                 System.out.println("------------------------------");
-                System.out.println(" INTRODUZCA ISBM PARA REPARAR ");
+                System.out.println(" INTRODUZCA ISBN PARA REPARAR ");
                 System.out.println("------------------------------");
+<<<<<<< HEAD
                 System.out.println("  ");
                 reparar = tecla.next();
                 aceptar_mayus=reparar.toUpperCase();
+=======
+                String reparar = tecla.next();
+                String aceptar_mayus = reparar.toUpperCase();
+
+                if (aceptar_mayus.length() != 10) {
+                    System.out.println("El ISBN debe tener 10 caracteres");
+                    return;
+                }
+
+>>>>>>> 25c071dbeb2c5bfa6966015f1480091bc80e1e03
                 int suma = 0;
                 int posicion = -1;
 
                 for (int i = 0; i < 10; i++) {
+<<<<<<< HEAD
                     char x = reparar.charAt(i);
+=======
+                    char x = aceptar_mayus.charAt(i);
+                    int valor = 0;
+>>>>>>> 25c071dbeb2c5bfa6966015f1480091bc80e1e03
 
                     if (x == '?') {
                         posicion = i;
                         continue;
                     }
 
+<<<<<<< HEAD
                     int valor;
+=======
+>>>>>>> 25c071dbeb2c5bfa6966015f1480091bc80e1e03
                     if (i == 9 && x == 'X') {
                         valor = 10;
                     } else if (x >= '0' && x <= '9') {
@@ -100,6 +117,7 @@ public class ISBM {
                         return;
                     }
 
+<<<<<<< HEAD
                     suma += valor * (10 - i);
                 }
 
@@ -116,10 +134,26 @@ public class ISBM {
                         System.out.println("El ISBN reparado es: " +
                                 reparar.substring(0, posicion) + repararando + reparar.substring(posicion + 1));
                         return;
+=======
+                    int resta = 10 - i;
+                    suma += valor * resta;
+                }
+
+
+                if (posicion != -1) {
+                    for (int i = 0; i <= 10; i++) {
+                        int test = suma + i * (10 - posicion);
+                        if (test % 11 == 0) {
+                            System.out.println("El dígito correcto en la posición " + (posicion + 1) + " es: " + (i == 10 ? "X" : i));
+                            return;
+                        }
+>>>>>>> 25c071dbeb2c5bfa6966015f1480091bc80e1e03
                     }
+                    System.out.println("No se pudo reparar el ISBN");
                 }
 
                 System.out.println("No se pudo reparar el ISBN.");
+
 
                 break;
 
