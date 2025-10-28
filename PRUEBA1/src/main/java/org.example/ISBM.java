@@ -85,15 +85,15 @@ public class ISBM {
                 }
 
                 int suma = 0;
-                int posSigno = -1; // posición del '?' si existe
+                int posSigno = -1; 
 
                 for (int i = 0; i < 10; i++) {
                     char x = aceptar_mayus.charAt(i);
                     int valor = 0;
 
                     if (x == '?') {
-                        posSigno = i; // guardamos la posición a reparar
-                        continue; // dejamos para calcular después
+                        posSigno = i;
+                        continue;
                     }
 
                     if (i == 9 && x == 'X') {
@@ -109,7 +109,7 @@ public class ISBM {
                     suma += valor * resta;
                 }
 
-// Si hay un '?' se calcula el dígito faltante
+
                 if (posSigno != -1) {
                     for (int i = 0; i <= 10; i++) {
                         int test = suma + i * (10 - posSigno);
