@@ -1,6 +1,8 @@
+package TEMA_1;
+
 import java.util.Scanner;
 
-public class Avtividad6 {
+public class Do_While {
      static void main(){
          Scanner teclas = new Scanner(System.in);
 

@@ -1,3 +1,5 @@
+package TEMA_2;
+
 import java.util.Scanner;
 
 public class Practica4_tema2 {

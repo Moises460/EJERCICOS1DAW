@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 
 public class Practica_7 {
@@ -11,18 +13,18 @@ public class Practica_7 {
             num2= teclas.nextInt();
 
         String num_string= Integer.toString(num1);
-        String num_izquierda = num_string.substring(0,1);
-        String num_central = num_string.substring(1,2);
-        String num_derecha = num_string.substring(2,3);
+        String num_izquierda = num_string.toString(0,1);
+        String num_central = num_string.toString(1,2);
+        String num_derecha = num_string.toString(2,3);
 
         int num_izquierda_int= Integer.parseInt(num_izquierda);
         int num_central_int= Integer.parseInt(num_central);
         int num_derecha_int= Integer.parseInt(num_derecha);
 
         String num_string2 = Integer.toString(num2);
-        String num_izquierda2 = num_string2.substring(0,1);
-        String num_central2 = num_string2.substring(1,2);
-        String num_derecha2= num_string2.substring(2,3);
+        String num_izquierda2 = num_string2.toString(0,1);
+        String num_central2 = num_string2.toString(1,2);
+        String num_derecha2= num_string2.toString(2,3);
 
         int num_izquierda_int2= Integer.parseInt(num_izquierda2);
         int num_central_int2= Integer.parseInt(num_central2);
