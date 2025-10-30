@@ -1,7 +1,6 @@
-import java.sql.Time;
+
+
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Actividad3_tema2 {

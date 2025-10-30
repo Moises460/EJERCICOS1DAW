@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.Scanner;
 
 public class ISBM {
@@ -7,6 +9,8 @@ public class ISBM {
         int tamanyo = 0;
         int seleccion = 0;
         String validar;
+
+
         String validar_mayus;
 
         System.out.println("--------------------");
@@ -83,14 +87,14 @@ public class ISBM {
                 }
 
                 int suma = 0;
-                int posicion = -1;
+                int posSigno = -1; 
 
                 for (int i = 0; i < 10; i++) {
                     char x = aceptar_mayus.charAt(i);
                     int valor = 0;
 
                     if (x == '?') {
-                        posicion = i;
+                        posSigno = i;
                         continue;
                     }
 
@@ -108,18 +112,21 @@ public class ISBM {
                 }
 
 
-                if (posicion != -1) {
+                if (posSigno != -1) {
                     for (int i = 0; i <= 10; i++) {
-                        int test = suma + i * (10 - posicion);
+                        int test = suma + i * (10 - posSigno);
                         if (test % 11 == 0) {
+<<<<<<< HEAD
                             int arreglado=(i == 10 ? Integer.parseInt("X") : i);
                             System.out.println("El dígito correcto en la posición " + (posicion + 1) + " es: " + (i == 10 ? "X" : i));
+=======
+                            System.out.println("El dígito correcto en la posición " + (posSigno + 1) + " es: " + (i == 10 ? "X" : i));
+>>>>>>> e922a316a710df009bb7ca526d5a02df0d372a1b
                             return;
                         }
                     }
                     System.out.println("No se pudo reparar el ISBN");
                 }
-
 
 
                 break;

@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 
 public class PractiCa3_tema2 {
