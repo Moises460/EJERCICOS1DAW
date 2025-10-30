@@ -70,4 +70,4 @@ public class Bascula {
 
         }
     }
-}
+}0
