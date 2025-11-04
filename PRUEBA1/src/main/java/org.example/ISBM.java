@@ -116,12 +116,12 @@ public class ISBM {
                     for (int i = 0; i <= 10; i++) {
                         int test = suma + i * (10 - posSigno);
                         if (test % 11 == 0) {
-<<<<<<< HEAD
+
                             int arreglado=(i == 10 ? Integer.parseInt("X") : i);
-                            System.out.println("El dígito correcto en la posición " + (posicion + 1) + " es: " + (i == 10 ? "X" : i));
-=======
+                            System.out.println("El dígito correcto en la posición " + ( + 1) + " es: " + (i == 10 ? "X" : i));
+
                             System.out.println("El dígito correcto en la posición " + (posSigno + 1) + " es: " + (i == 10 ? "X" : i));
->>>>>>> e922a316a710df009bb7ca526d5a02df0d372a1b
+
                             return;
                         }
                     }

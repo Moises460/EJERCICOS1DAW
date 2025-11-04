@@ -1,4 +1,4 @@
-package TEMA_2;
+package org.example;
 
 import java.util.Scanner;
 
@@ -72,4 +72,4 @@ public class Bascula {
 
         }
     }
-}0
+}
