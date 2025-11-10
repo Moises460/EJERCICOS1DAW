@@ -25,7 +25,7 @@ public class BUCLES {
 //        }while (true);
 //
 //
-//        while (true){
+ //        while (true){
 //            System.out.println("Introde salir en caso de quere salir");
 //            String recoger=teclas.next();
 //

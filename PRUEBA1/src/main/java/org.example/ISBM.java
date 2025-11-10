@@ -85,7 +85,7 @@ public class ISBM {
                 }
 
                 int suma = 0;
-                int posSigno = -1; 
+                int posSigno = -1;
 
                 for (int i = 0; i < 10; i++) {
                     char x = aceptar_mayus.charAt(i);
