@@ -4,7 +4,7 @@ import java.lang.String;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Practica_samurias {
+public class Practica_samurais {
     static void main(String[] args) {
         Scanner tc = new Scanner(System.in);
         Random rnd = new Random();
