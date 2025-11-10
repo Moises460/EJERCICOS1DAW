@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.Scanner;
 
 public class ISBM {
@@ -114,7 +116,12 @@ public class ISBM {
                     for (int i = 0; i <= 10; i++) {
                         int test = suma + i * (10 - posSigno);
                         if (test % 11 == 0) {
+
+                            int arreglado=(i == 10 ? Integer.parseInt("X") : i);
+                            System.out.println("El dígito correcto en la posición " + ( + 1) + " es: " + (i == 10 ? "X" : i));
+
                             System.out.println("El dígito correcto en la posición " + (posSigno + 1) + " es: " + (i == 10 ? "X" : i));
+
                             return;
                         }
                     }

@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 
 public class Practica1_tema2 {
