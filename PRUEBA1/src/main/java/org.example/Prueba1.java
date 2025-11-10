@@ -1,8 +1,8 @@
-
+package org.example;
 
 import java.util.Scanner;
 
-public class String {
+class String {
 
 
 
@@ -13,31 +13,31 @@ public class String {
 
         Scanner teclas= new Scanner(System.in);
 
-        String frase="Viva españa y su gente<3";
+        java.lang.String frase="Viva españa y su gente<3";
 
         int tamanyo= frase.length();
         System.out.println(tamanyo);
 
         System.out.println(frase.charAt(0));
 
-        String trozo=frase.substring(14,24);
+        java.lang.String trozo=frase.substring(14,24);
         System.out.println(trozo);
 
-        String trozo2 =frase.substring(5);
+        java.lang.String trozo2 =frase.substring(5);
         System.out.println(trozo2);
 
         int posicion_españa=frase.indexOf("españa");
         System.out.println(posicion_españa);
 
-        String frase_mayus= frase.toUpperCase();
+        java.lang.String frase_mayus= frase.toUpperCase();
         System.out.println(frase_mayus);
-        String frase_minus = frase.toLowerCase();
+        java.lang.String frase_minus = frase.toLowerCase();
         System.out.println(frase_minus);
 
 
-        String nombre="Moises             ";
+        java.lang.String nombre="Moises             ";
         System.out.println(nombre.trim() + " - " + nombre + "*");
-        String nombre_mayus=nombre.toUpperCase();
+        java.lang.String nombre_mayus=nombre.toUpperCase();
 
         boolean iguales= nombre_mayus.trim().equals("MOISES");
 
@@ -48,7 +48,7 @@ public class String {
         System.out.println(iguales2);
 
 
-        String cambiado= frase.replace("españa","España");
+        java.lang.String cambiado= frase.replace("españa","España");
         System.out.println(cambiado);
 
 
