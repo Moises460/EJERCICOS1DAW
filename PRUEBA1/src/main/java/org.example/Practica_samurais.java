@@ -4,7 +4,7 @@ import java.lang.String;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Practica_samurais {
+public class Practica_samurias {
     static void main(String[] args) {
         Scanner tc = new Scanner(System.in);
         Random rnd = new Random();
@@ -28,12 +28,12 @@ public class Practica_samurais {
             contador = 0;
 
             System.out.print("SACA TUS SAMURAIS A LA BATALLA (EQUIPO" + equipo_actual + "): ");
-            String numero = tc.next();
+            String numero = tc.nextLine();
             String[] equipo = numero.split(",");
 
             // Control exacto de 7 digitos
             if (equipo.length != 7) {
-                System.out.println("DEBES INTRODUCIR EXACTAMENTE 7 SAMURAIS");
+                System.out.println("DEBES INTRODUCIR EXACTAMENTE 7 SAMURAIS CON LA ','");
                 validar_equipo = false;
                 continue;
             }
@@ -119,9 +119,9 @@ public class Practica_samurais {
         } else if (victorias2 > victorias1) {
             System.out.println("     GANA EL EQUIPO 2 CON -->" + victorias2 + " VICTORIAS");
         } else {
-            System.out.println("      LA BATALLA HA SIDO UN EMPATE DE" + empate + "-" + empate);
+            System.out.println("      LA BATALLA HA SIDO UN EMPATE DE " + empate + " - " + empate);
         }
 
 
     }
-}
+}}
