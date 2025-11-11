@@ -79,7 +79,7 @@ public class ISBM {
                 System.out.println(" INTRODUZCA ISBN PARA REPARAR ");
                 System.out.println("------------------------------");
                 String reparar = tecla.next();
-                String aceptar_mayus = reparar.toUpperCase();
+                String aceptar_mayus = ((java.lang.String) reparar).toUpperCase();
 
                 if (aceptar_mayus.length() != 10) {
                     System.out.println("El ISBN debe tener 10 caracteres");
