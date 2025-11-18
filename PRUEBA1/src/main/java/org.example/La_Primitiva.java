@@ -17,8 +17,10 @@ public class La_Primitiva {
         int[] premio = new int[6];
         int reintegro= rnd.nextInt(10);//GENERA RANDOM 0-9
         int complementario= rnd.nextInt(49)+1;//GENERA RANDOM DEL 1-49
+        System.out.println(reintegro);
+        System.out.println(complementario);
 
-        // GENERA EL RANDOM DE LA PRIMITIVIA Y COMPRUEBA QUE NO SE REPETIN NINGUNO Y LOS ORDENAS DE MAS PEQUEÑO A MAS GRADNE
+// GENERA EL RANDOM DE LA PRIMITIVIA Y COMPRUEBA QUE NO SE REPETIN NINGUNO Y LOS ORDENAS DE MAS PEQUEÑO A MAS GRADNE
         for (int i = 0; i < premio.length; i++) {
             premio[i] = rnd.nextInt(49) + 1;
             for (int j = 0; j < i; j++) {
@@ -29,7 +31,7 @@ public class La_Primitiva {
             }
         }
         Arrays.sort(premio);
-
+        System.out.println(Arrays.toString(premio));
 
         System.out.println("*-------------------------------------------------------*");
         System.out.println("               BIENVENIDO A LA PRIMITIVA");
@@ -48,7 +50,7 @@ public class La_Primitiva {
             } else {
                 control = true;
 
-                 // COMPRUEBA QUE LOS NUMEROS DEL USUARIO NO SEA MAYOR A 49 NI MENOR A 0
+                // COMPRUEBA QUE LOS NUMEROS DEL USUARIO NO SEA MAYOR A 49 NI MENOR A 0
                 for (int i = 0; i < 6; i++) {
                     int correcto = Integer.parseInt(usuario_val[i]);
 
@@ -58,7 +60,7 @@ public class La_Primitiva {
                         break;
                     }
 
-                    //COMPRUEBA QUE EL USUARIO NO INTRUDE NINGUN NUMERO REPETIDO
+                    //COMPRUEBA QUE EL USUARIO NO INTRODUCE NINGUN NUMERO REPETIDO
                     for (int j = i + 1; j < 6; j++) {
                         int comprobador = Integer.parseInt(usuario_val[j]);
                         if (correcto == comprobador) {
@@ -72,25 +74,28 @@ public class La_Primitiva {
 
         } while (!control);
 
-
-        //CONTADORES CON VALOR INICIAL A 0
+//CONTADORES CON VALOR INICIAL A 0
         int aciertos = 0;
         int acierto_reintegro=0;
         int acierto_complementario=0;
         int[] usuario_nums = new int[6];
 
-        //CONTADOR PARA LOS NUMEROS DE ACIERTOS(ES DECIR COMPARA LO QUE PONE EL USUARIO Y LO COMPARA CON EL RANDOM)
+//SIRVE PARA RELLENAR EL USUARIO_NUM
+        for (int i = 0; i < 6; i++) {
+            usuario_nums[i] = Integer.parseInt(usuario_val[i]);
+        }
+        System.out.println("Tus números: " + Arrays.toString(usuario_nums));
+
+//CONTADOR PARA LOS NUMEROS DE ACIERTOS
         for (int i = 0; i < usuario_nums.length; i++) {
             for (int j = 0; j < premio.length; j++) {
                 if (usuario_nums[i] == premio[j]) {
                     aciertos++;
                 }
-
             }
-
         }
 
-        //CONTADOR PARA LOS NUEMEROS COMPLEMENTARIOS
+//CONTADOR PARA LOS NUMEROS COMPLEMENTARIOS
         for (int i = 0; i < usuario_nums.length; i++) {
             if (usuario_nums[i] == complementario) {
                 acierto_complementario++;
@@ -98,54 +103,57 @@ public class La_Primitiva {
             }
         }
 
-        //CONTADOR PARA EL REINTEGRO
+//CONTADOR PARA EL REINTEGRO
         int posicion_final = Integer.parseInt(usuario_val[usuario_val.length - 1]);
-        if(reintegro ==posicion_final ){
+        if(reintegro == posicion_final){
             acierto_reintegro++;
         }
 
-          //AQUI SE MUESTRA LOS RESULTADOS
+//AQUI SE MUESTRA LOS RESULTADOS
         System.out.println("*---------------------------*");
         System.out.println("HA SALIDO:");
-        System.out.println( Arrays.toString(premio));
+        System.out.println(Arrays.toString(premio));
         System.out.println("COMPLEMENTARIO: "+complementario);
-        System.out.println("REINTREGO: "+reintegro);
+        System.out.println("REINTEGRO: "+reintegro);
         System.out.println("*---------------------------*");
 
         System.out.println("RESULTADO");
 
-        // SIRVE PARA DAR LA CATEGORIA DEL PREMIO
+// SIRVE PARA DAR LA CATEGORIA DEL PREMIO
         switch (aciertos){
             case 6:
-                if(acierto_reintegro==1){
-                    System.out.println("CATEGORIA ESPECIAL 6 NUMEROR ACERTADOS + EL REINTEGRO");
-                }else {
-                    System.out.println("1ª CATEGORIA: 6 NÚMEROS ACERTADOS");
+                if(acierto_reintegro == 1){
+                    System.out.println("CATEGORIA ESPECIAL 6 NUMEROS ACERTADOS + EL REINTEGRO");
+                } else {
+                    System.out.println("1ª CATEGORIA: 6 NUMEROS ACERTADOS");
                 }
                 break;
+
             case 5:
                 if (acierto_complementario == 1) {
-                    System.out.println("2ª CATEGORIA: 5 NÚMEROS ACERTADOS + COMPLEMENTARIO");
-                }else {
-                    System.out.println("3ª CATEGORIA: 5 NÚMEROS ACERTADOS");
+                    System.out.println("2ª CATEGORIA: 5 NUMEROS ACERTADOS + COMPLEMENTARIO");
+                } else {
+                    System.out.println("3ª CATEGORIA: 5 NUMEROS ACERTADOS");
                 }
                 break;
+
             case 4:
-                System.out.println("4ª CATEGORIA: 4 NÚMEROS ACERTADOS");
+                System.out.println("4ª CATEGORIA: 4 NUMEROS ACERTADOS");
                 break;
+
             case 3:
-                System.out.println("5ª CATEGORIA: 3 NÚMEROS ACERTADOS");
+                System.out.println("5ª CATEGORIA: 3 NUMEROS ACERTADOS");
                 break;
 
             default:
                 if (acierto_reintegro == 1) {
-                    System.out.println("REINTREGO ACERTADO");
+                    System.out.println("REINTEGRO ACERTADO");
                 } else {
                     System.out.println("NO PREMIADO");
                 }
                 break;
-
         }
+
         System.out.println("*---------------------------*");
     }
 }
