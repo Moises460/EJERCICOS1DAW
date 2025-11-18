@@ -47,6 +47,7 @@ public class La_Primitiva {
                 control = false;
             } else {
                 control = true;
+
                  // COMPRUEBA QUE LOS NUMEROS DEL USUARIO NO SEA MAYOR A 49 NI MENOR A 0
                 for (int i = 0; i < 6; i++) {
                     int correcto = Integer.parseInt(usuario_val[i]);
@@ -56,6 +57,7 @@ public class La_Primitiva {
                         control = false;
                         break;
                     }
+
                     //COMPRUEBA QUE EL USUARIO NO INTRUDE NINGUN NUMERO REPETIDO
                     for (int j = i + 1; j < 6; j++) {
                         int comprobador = Integer.parseInt(usuario_val[j]);
@@ -140,6 +142,5 @@ public class La_Primitiva {
 
         }
         System.out.println("*---------------------------*");
-
     }
 }
