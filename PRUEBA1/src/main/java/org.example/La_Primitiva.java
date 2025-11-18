@@ -87,6 +87,7 @@ public class La_Primitiva {
                 }
 
             }
+
         }
 
         //CONTADOR PARA LOS NUEMEROS COMPLEMENTARIOS
@@ -116,7 +117,11 @@ public class La_Primitiva {
         // SIRVE PARA DAR LA CATEGORIA DEL PREMIO
         switch (aciertos){
             case 6:
-                System.out.println("1ª CATEGORIA: 6 NÚMEROS ACERTADOS");
+                if(acierto_reintegro==1){
+                    System.out.println("CATEGORIA ESPECIAL 6 NUMEROR ACERTADOS + EL REINTEGRO");
+                }else {
+                    System.out.println("1ª CATEGORIA: 6 NÚMEROS ACERTADOS");
+                }
                 break;
             case 5:
                 if (acierto_complementario == 1) {
