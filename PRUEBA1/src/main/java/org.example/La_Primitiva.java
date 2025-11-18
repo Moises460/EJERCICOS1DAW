@@ -80,7 +80,7 @@ public class La_Primitiva {
         for (int i = 0; i < 6; i++) {
             usuario_nums[i] = Integer.parseInt(usuario_val[i]);
         }
-        System.out.println("Tus números: " + Arrays.toString(usuario_nums));
+        System.out.println("TUS NUMEROS SON : " + Arrays.toString(usuario_nums));
 
 //CONTADOR PARA LOS NUMEROS DE ACIERTOS
         for (int i = 0; i < usuario_nums.length; i++) {
