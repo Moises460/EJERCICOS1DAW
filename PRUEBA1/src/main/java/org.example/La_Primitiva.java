@@ -16,7 +16,7 @@ public class La_Primitiva {
         boolean control = true;
         int[] premio = new int[6];
         int reintegro= rnd.nextInt(10);
-        int complementario= rnd.nextInt(50);
+        int complementario= rnd.nextInt(49)+1;
 
         for (int i = 0; i < premio.length; i++) {
             premio[i] = rnd.nextInt(49) + 1;
