@@ -17,8 +17,6 @@ public class La_Primitiva {
         int[] premio = new int[6];
         int reintegro= rnd.nextInt(10);//GENERA RANDOM 0-9
         int complementario= rnd.nextInt(49)+1;//GENERA RANDOM DEL 1-49
-        System.out.println(reintegro);
-        System.out.println(complementario);
 
 // GENERA EL RANDOM DE LA PRIMITIVIA Y COMPRUEBA QUE NO SE REPETIN NINGUNO Y LOS ORDENAS DE MAS PEQUEÑO A MAS GRADNE
         for (int i = 0; i < premio.length; i++) {
@@ -31,7 +29,6 @@ public class La_Primitiva {
             }
         }
         Arrays.sort(premio);
-        System.out.println(Arrays.toString(premio));
 
         System.out.println("*-------------------------------------------------------*");
         System.out.println("               BIENVENIDO A LA PRIMITIVA");
