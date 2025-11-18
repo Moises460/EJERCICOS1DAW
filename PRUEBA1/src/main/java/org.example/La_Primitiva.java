@@ -50,7 +50,6 @@ public class La_Primitiva {
                 // COMPRUEBA QUE LOS NUMEROS DEL USUARIO NO SEA MAYOR A 49 NI MENOR A 0
                 for (int i = 0; i < 6; i++) {
                     int correcto = Integer.parseInt(usuario_val[i]);
-
                     if (correcto < 1 || correcto > 49) {
                         System.out.println("NO PUEDES INTRODUCIR NÚMEROS MAYORES DE 49 NI MENORES DE 1");
                         control = false;
