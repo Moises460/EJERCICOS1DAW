@@ -15,9 +15,10 @@ public class La_Primitiva {
 
         boolean control = true;
         int[] premio = new int[6];
-        int reintegro= rnd.nextInt(10);
-        int complementario= rnd.nextInt(49)+1;
+        int reintegro= rnd.nextInt(10);//GENERA RANDOM 0-9
+        int complementario= rnd.nextInt(49)+1;//GENERA RANDOM DEL 1-49
 
+        // GENERA EL RANDOM DE LA PRIMITIVIA Y COMPRUEBA QUE NO SE REPETIN NINGUNO Y LOS ORDENAS DE MAS PEQUEÑO A MAS GRADNE
         for (int i = 0; i < premio.length; i++) {
             premio[i] = rnd.nextInt(49) + 1;
             for (int j = 0; j < i; j++) {
@@ -35,17 +36,18 @@ public class La_Primitiva {
         System.out.println("*-------------------------------------------------------*");
 
         do {
-
+            // DATOS QUE INTRODUCE EL USUARIO
             System.out.println("INTRODUCE SUS NUMEROS PARA LA PRIMITIVA [N-N-N-N-N-N/R]");
             usuario = tc.nextLine();
             usuario_val = usuario.split("[-/]");
 
+            //COMPRUEBA EL FORMATO QUE SEA CORECTO DA UN TRUE SI ES CORRECTO Y UN FALS SI ES FALSO
             if (!usuario.matches("\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}/\\d{1}")) {
                 System.out.println("FORMATO INCORRECTO EJ:[1-2-3-4-5-6/7]");
                 control = false;
             } else {
                 control = true;
-
+                 // COMPRUEBA QUE LOS NUMEROS DEL USUARIO NO SEA MAYOR A 49 NI MENOR A 0
                 for (int i = 0; i < 6; i++) {
                     int correcto = Integer.parseInt(usuario_val[i]);
 
@@ -54,7 +56,7 @@ public class La_Primitiva {
                         control = false;
                         break;
                     }
-
+                    //COMPRUEBA QUE EL USUARIO NO INTRUDE NINGUN NUMERO REPETIDO
                     for (int j = i + 1; j < 6; j++) {
                         int comprobador = Integer.parseInt(usuario_val[j]);
                         if (correcto == comprobador) {
@@ -68,11 +70,14 @@ public class La_Primitiva {
 
         } while (!control);
 
+
+        //CONTADORES CON VALOR INICIAL A 0
         int aciertos = 0;
         int acierto_reintegro=0;
         int acierto_complementario=0;
         int[] usuario_nums = new int[6];
 
+        //CONTADOR PARA LOS NUMEROS DE ACIERTOS(ES DECIR COMPARA LO QUE PONE EL USUARIO Y LO COMPARA CON EL RANDOM)
         for (int i = 0; i < usuario_nums.length; i++) {
             for (int j = 0; j < premio.length; j++) {
                 if (usuario_nums[i] == premio[j]) {
@@ -82,7 +87,7 @@ public class La_Primitiva {
             }
         }
 
-
+        //CONTADOR PARA LOS NUEMEROS COMPLEMENTARIOS
         for (int i = 0; i < usuario_nums.length; i++) {
             if (usuario_nums[i] == complementario) {
                 acierto_complementario++;
@@ -90,15 +95,13 @@ public class La_Primitiva {
             }
         }
 
-
-
-
+        //CONTADOR PARA EL REINTEGRO
         int posicion_final = Integer.parseInt(usuario_val[usuario_val.length - 1]);
         if(reintegro ==posicion_final ){
             acierto_reintegro++;
         }
 
-
+          //AQUI SE MUESTRA LOS RESULTADOS
         System.out.println("*---------------------------*");
         System.out.println("HA SALIDO:");
         System.out.println( Arrays.toString(premio));
@@ -108,7 +111,7 @@ public class La_Primitiva {
 
         System.out.println("RESULTADO");
 
-
+        // SIRVE PARA DAR LA CATEGORIA DEL PREMIO
         switch (aciertos){
             case 6:
                 System.out.println("1ª CATEGORIA: 6 NÚMEROS ACERTADOS");
