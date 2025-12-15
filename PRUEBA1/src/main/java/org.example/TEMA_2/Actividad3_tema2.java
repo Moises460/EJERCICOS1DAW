@@ -1,4 +1,4 @@
-
+package org.example.TEMA_2;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
